@@ -1,0 +1,26 @@
+{
+	"Id": "HyperBot",
+	"Name": "HyperBot",
+	"Description": "HyperBot",
+	"Version": "1.0.0",
+	"Authors": {
+		"Developers": [
+			"CoreByte"
+		],
+		"Contributors": []
+	},
+	"Contact": {
+		"Website": "",
+		"Source": "",
+		"Socials": {}
+	},
+	"Dependencies": [
+		"npm+fs-extra@11.1.1",
+		"npm+ws@8.14.2",
+        "npm+node-fetch@2.7.0",
+        "npm+p-event@4.2.0"
+	],
+	"Entrypoints": {
+		"Main": "me.corebyte.HyperBot"
+	}
+}
