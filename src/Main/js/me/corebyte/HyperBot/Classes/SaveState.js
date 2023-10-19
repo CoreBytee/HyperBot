@@ -26,7 +26,10 @@ class SaveState {
         setInterval(
             () => {
                 const TimeLeft = this.GetTimeLeft()
-                console.log(`Time left: ${TimeLeft} ${this.GetState()}`)
+                const State = this.GetState()
+                if (State == this.CurrentState) { return }
+                this.CurrentState = State
+                this.StateChange(State, new Date(this.NextSave * 1000))
             },
             1000
         )
@@ -43,7 +46,6 @@ class SaveState {
     GetState() {
         const TimeLeft = this.GetTimeLeft()
         for (const State of this.States) {
-            console.log(State)
             if (FitsClamp(State.Min, State.Max, TimeLeft)) {
                 return State.State
             }
